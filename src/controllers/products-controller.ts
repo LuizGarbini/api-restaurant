@@ -40,8 +40,9 @@ class ProductController {
 			const id = z
 				.string()
 				.transform((value) => Number(value))
-				// biome-ignore lint/suspicious/noGlobalIsNan: <explanation>
-				.refine((value) => !isNaN(value), { message: "id must be a number" })
+				.refine((value) => !Number.isNaN(value), {
+					message: "id must be a number",
+				})
 				.parse(request.params.id);
 
 			const bodySchema = z.object({
@@ -75,8 +76,9 @@ class ProductController {
 			const id = z
 				.string()
 				.transform((value) => Number(value))
-				// biome-ignore lint/suspicious/noGlobalIsNan: <explanation>
-				.refine((value) => !isNaN(value), { message: "id must be a number" })
+				.refine((value) => !Number.isNaN(value), {
+					message: "id must be a number",
+				})
 				.parse(request.params.id);
 
 			const product = await knex<ProductRepository>("products")
