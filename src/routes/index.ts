@@ -1,6 +1,6 @@
 import { Router } from "express";
 
-import { ordersRoutes } from "./order-routes";
+import { ordersRoutes } from "./orders-routes";
 import { productsRoutes } from "./products-routes";
 import { tablesRoutes } from "./tables-routes";
 import { tablesSessionsRoutes } from "./tables-sessions-routes";
